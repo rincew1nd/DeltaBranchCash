@@ -46,7 +46,7 @@ import javax.xml.bind.annotation.XmlType;
 public class ArrayOfKeyValueOfstringstring {
 
     @XmlElement(name = "KeyValueOfstringstring")
-    protected List<ArrayOfKeyValueOfstringstring.KeyValueOfstringstring> keyValueOfstringstring;
+    public List<ArrayOfKeyValueOfstringstring.KeyValueOfstringstring> keyValueOfstringstring;
 
     /**
      * Gets the value of the keyValueOfstringstring property.
@@ -69,21 +69,49 @@ public class ArrayOfKeyValueOfstringstring {
      * {@link ArrayOfKeyValueOfstringstring.KeyValueOfstringstring }
      * 
      * 
+     * @return 
      */
     public List<ArrayOfKeyValueOfstringstring.KeyValueOfstringstring> getKeyValueOfstringstring() {
         if (keyValueOfstringstring == null) {
-            keyValueOfstringstring = new ArrayList<ArrayOfKeyValueOfstringstring.KeyValueOfstringstring>();
+            keyValueOfstringstring = new ArrayList<>();
         }
         return this.keyValueOfstringstring;
     }
     public void setKeyValueOfstringstring(List<ArrayOfKeyValueOfstringstring.KeyValueOfstringstring> LAOKVOSS) {
-        keyValueOfstringstring = new ArrayList<ArrayOfKeyValueOfstringstring.KeyValueOfstringstring>();
+        keyValueOfstringstring = new ArrayList<>();
         for (KeyValueOfstringstring LAOKVOSSElem : LAOKVOSS) {
             keyValueOfstringstring.add(LAOKVOSSElem);
         }
     }
-
-
+    public void add(KeyValueOfstringstring KVOSS)
+    {
+        if (keyValueOfstringstring == null) {
+            keyValueOfstringstring = new ArrayList<>();
+        }
+        keyValueOfstringstring.add(KVOSS);
+    }
+    public KeyValueOfstringstring getValue(int index)
+    {
+        if (keyValueOfstringstring == null) {
+            keyValueOfstringstring = new ArrayList<>();
+        }
+        return keyValueOfstringstring.get(index);
+    }
+    public List<KeyValueOfstringstring> getValueList()
+    {
+        if (keyValueOfstringstring == null) {
+            keyValueOfstringstring = new ArrayList<>();
+        }
+        return keyValueOfstringstring;
+    }
+    public int size()
+    {
+        if (keyValueOfstringstring == null) {
+            keyValueOfstringstring = new ArrayList<>();
+        }
+        return keyValueOfstringstring.size();
+    }
+    
     /**
      * <p>Java class for anonymous complex type.
      * 

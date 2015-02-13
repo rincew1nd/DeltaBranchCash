@@ -22,56 +22,74 @@ public class MySQL {
     {
     }
     
+    // Get parameters for response
     public Parameters GetParameters(long tran_id)
-    {
+    {   
+        // Parameters array
         Parameters paramsPool = new Parameters();
-        
-        KeyValueOfstringstring KVOSS = new KeyValueOfstringstring();// = new KeyValueOfstringstring("asd", "sds");
-        List<ArrayOfKeyValueOfstringstring.KeyValueOfstringstring> LAOKVOSS = new ArrayList<ArrayOfKeyValueOfstringstring.KeyValueOfstringstring>();
+        // Variables to create response type variables.
+        // KeyValueOfstringstring ->
+        // ArrayOfKeyValueOfstringstring ->
+        // JAXBElement<ArrayOfKeyValueOfstringstring>
+        KeyValueOfstringstring KVOSS;
         ArrayOfKeyValueOfstringstring AOKVOSS = new ArrayOfKeyValueOfstringstring();
-        
+      
+        // Try to connect to DB and fill paramsPool
         try {
+            // Connect variables
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection(URI, User, Password);
             stmn = conn.createStatement();
             rs = stmn.executeQuery("SELECT * FROM DATA WHERE tran_id = " + tran_id);
-
+            
+            // Cycle for getting all params from DB of specified transaction
             while (rs.next())
             {
-                System.out.print("\n"+rs.getInt("tran_id"));
-                System.out.print("\n"+rs.getString("key"));
-                System.out.print("\n"+rs.getString("value"));
-                paramsPool.setTranId(rs.getInt("tran_id"));
+                KVOSS = new KeyValueOfstringstring();
+                // Fill KeyValueOfstringstring element
                 KVOSS.setKey(rs.getString("key"));
                 KVOSS.setValue(rs.getString("value"));
-                LAOKVOSS.add(KVOSS);
+                // Add KeyValueOfstringstring to List
+                AOKVOSS.add(KVOSS);
             }
-            AOKVOSS.setKeyValueOfstringstring(LAOKVOSS);
-            paramsPool.setJAXB(AOKVOSS);
+            for (int i = 0; i<AOKVOSS.size(); i++)
+            {
+                KVOSS = AOKVOSS.getValue(i);
+                System.out.print(i + KVOSS.getKey() + KVOSS.getValue());
+            }
+            // Create Parameter type variable that store transaction id and parameters to response
+            paramsPool.setParameters(tran_id, AOKVOSS);
             
+            // Close connection
             rs.close();
             stmn.close();
             conn.close();
         }
         catch (Exception ex) {
-            System.err.println("Got an exception! ");
-            System.err.println(ex.getMessage());
+            System.err.println("Got an exception!" +ex.getMessage()+ " !");
         }
+        
+        // Return filled response
         return paramsPool;
     }
     
+    // Get status of transaction
     public long getStatus(long tran_id)
     {
+        // Default status
         long status = 404l;
-        try {            
+        try {
+            // DB connection
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection(URI, User, Password);
             stmn = conn.createStatement();
             rs = stmn.executeQuery("select * from tran_status where tran_id = "+tran_id);
             
+            // Store first row value (tran_id in unique)
             rs.next();
             status = rs.getLong("status");
             
+            // DB connection close
             rs.close();
             stmn.close();
             conn.close();
@@ -81,9 +99,11 @@ public class MySQL {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
         }
+        
         return status;
     }
     
+    // Store params of request in DB
     public long StoreParameters(long tran_id, JAXBElement<ArrayOfKeyValueOfstringstring> JAXBAOKVOSS)
     {
         try {
@@ -92,11 +112,9 @@ public class MySQL {
             stmn = conn.createStatement();
             
             ArrayOfKeyValueOfstringstring AOKVOSS = JAXBAOKVOSS.getValue();
-            List<ArrayOfKeyValueOfstringstring.KeyValueOfstringstring> LKVOSS = AOKVOSS.getKeyValueOfstringstring();
-            LKVOSS.size();
             
-            for (KeyValueOfstringstring LKVOSSElement : LKVOSS) {
-                stmn.executeUpdate("insert into data values ('"+tran_id+"','"+LKVOSSElement.getKey()+"','"+LKVOSSElement.getValue()+"')");
+            for (int i = 0; i<AOKVOSS.size(); i++) {
+                stmn.executeUpdate("insert into data values ('"+tran_id+"','"+AOKVOSS.getValue(i).getKey()+"','"+AOKVOSS.getValue(i).getValue()+"')");
             }
             
             stmn.close();
