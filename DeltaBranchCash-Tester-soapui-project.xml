@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="DeltaBranchCash?Tester" resourceRoot="" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_IBranchCashWebService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IBranchCashWebService" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/BranchCashWebService/DeltaBranchCash?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/BranchCashWebService/DeltaBranchCash?wsdl"><con:part><con:url>http://localhost:8080/BranchCashWebService/DeltaBranchCash?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown.-->
+<wsdl:definitions name="BranchCashWebService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp1="http://www.w3.org/ns/ws-policy" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" xmlns:jaxws="http://java.sun.com/xml/ns/jaxws">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/BranchCashWebService/DeltaBranchCash?xsd=1" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://localhost:8080/BranchCashWebService/DeltaBranchCash?xsd=2" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:8080/BranchCashWebService/DeltaBranchCash?xsd=3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBranchCashWebService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register"/>
+  </wsdl:message>
+  <wsdl:message name="IBranchCashWebService_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IBranchCashWebService_Status_InputMessage">
+    <wsdl:part name="parameters" element="tns:Status"/>
+  </wsdl:message>
+  <wsdl:message name="IBranchCashWebService_Status_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StatusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IBranchCashWebService_Repeat_InputMessage">
+    <wsdl:part name="parameters" element="tns:Repeat"/>
+  </wsdl:message>
+  <wsdl:message name="IBranchCashWebService_Repeat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RepeatResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IBranchCashWebService">
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBranchCashWebService/Register" message="tns:IBranchCashWebService_Register_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IBranchCashWebService/RegisterResponse" message="tns:IBranchCashWebService_Register_OutputMessage"/>
+      <jaxws:bindings>
+        <jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
+      </jaxws:bindings>
+    </wsdl:operation>
+    <wsdl:operation name="Status">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBranchCashWebService/Status" message="tns:IBranchCashWebService_Status_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IBranchCashWebService/StatusResponse" message="tns:IBranchCashWebService_Status_OutputMessage"/>
+      <jaxws:bindings>
+        <jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
+      </jaxws:bindings>
+    </wsdl:operation>
+    <wsdl:operation name="Repeat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBranchCashWebService/Repeat" message="tns:IBranchCashWebService_Repeat_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IBranchCashWebService/RepeatResponse" message="tns:IBranchCashWebService_Repeat_OutputMessage"/>
+      <jaxws:bindings>
+        <jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
+      </jaxws:bindings>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBranchCashWebService" type="tns:IBranchCashWebService">
+    <wsp1:PolicyReference URI="#BasicHttpBinding_IBranchCashWebServicePolicy"/>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IBranchCashWebService/Register" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Status">
+      <soap:operation soapAction="http://tempuri.org/IBranchCashWebService/Status" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Repeat">
+      <soap:operation soapAction="http://tempuri.org/IBranchCashWebService/Repeat" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BranchCashWebService">
+    <wsdl:port name="BasicHttpBinding_IBranchCashWebService" binding="tns:BasicHttpBinding_IBranchCashWebService">
+      <soap:address location="http://localhost:8080/BranchCashWebService/DeltaBranchCash"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsp1:Policy wsu:Id="BasicHttpBinding_IBranchCashWebServicePolicy">
+    <wsp1:ExactlyOne>
+      <wsp1:All/>
+    </wsp1:ExactlyOne>
+  </wsp1:Policy>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/BranchCashWebService/DeltaBranchCash?xsd=1</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown.-->
+<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://localhost:8080/BranchCashWebService/DeltaBranchCash?xsd=3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:element name="Register">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inputParameters" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterResult" type="xs:long"/>
+        <xs:element minOccurs="0" name="tranId" type="xs:long"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Status">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tranId" type="xs:long"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StatusResult" type="xs:long"/>
+        <xs:element minOccurs="0" name="outputParams" nillable="true" type="q2:ArrayOfKeyValueOfstringstring" xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Repeat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tranId" type="xs:long"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RepeatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RepeatResult" type="xs:long"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/BranchCashWebService/DeltaBranchCash?xsd=3</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown.-->
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfKeyValueOfstringstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfstringstring">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Key" nillable="true" type="xs:string"/>
+            <xs:element name="Value" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKeyValueOfstringstring" nillable="true" type="tns:ArrayOfKeyValueOfstringstring"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:8080/BranchCashWebService/DeltaBranchCash?xsd=2</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown.-->
+<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/IBranchCashWebService/Register" name="Register" bindingOperationName="Register" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Authorization"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Register>
+         <!--Optional:-->
+         <tem:inputParameters>
+            <!--Zero or more repetitions:-->
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Type</arr:Key>
+               <arr:Value>1</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>WorkplaceId</arr:Key>
+               <arr:Value>2234</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>SafeId</arr:Key>
+               <arr:Value>1234</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>SafeSide</arr:Key>
+               <arr:Value>1234</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>CashierId</arr:Key>
+               <arr:Value>1234</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>CashierName</arr:Key>
+               <arr:Value>3424</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>BranchId</arr:Key>
+               <arr:Value>1234</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>ExternalId</arr:Key>
+               <arr:Value>43</arr:Value>
+            </arr:KeyValueOfstringstring>
+         </tem:inputParameters>
+      </tem:Register>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IBranchCashWebService/Register"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Load Validation Print"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Register>
+         <!--Optional:-->
+         <tem:inputParameters>
+            <!--Zero or more repetitions:-->
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Type</arr:Key>
+               <arr:Value>2</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Name</arr:Key>
+               <arr:Value>REPL_LOAD</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>ReplExternalId</arr:Key>
+               <arr:Value>100543</arr:Value>
+            </arr:KeyValueOfstringstring>
+         </tem:inputParameters>
+      </tem:Register>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IBranchCashWebService/Register"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Cash Issue"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Register>
+         <!--Optional:-->
+         <tem:inputParameters>
+            <!--Zero or more repetitions:-->
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Type</arr:Key>
+               <arr:Value>3</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>CashierId</arr:Key>
+               <arr:Value>tst-oper4</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Currency</arr:Key>
+               <arr:Value>RUB</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Amount</arr:Key>
+               <arr:Value>1630000</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>TempocashAmount</arr:Key>
+               <arr:Value>-25000</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>ExternalId</arr:Key>
+               <arr:Value>207720</arr:Value>
+            </arr:KeyValueOfstringstring>
+         </tem:inputParameters>
+      </tem:Register>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IBranchCashWebService/Register"/><con:wsrmConfig version="1.2"/></con:call><con:call name="CashAccept"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Register>
+         <!--Optional:-->
+         <tem:inputParameters>
+            <!--Zero or more repetitions:-->
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Type</arr:Key>
+               <arr:Value>4</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>CashierId</arr:Key>
+               <arr:Value>tst-oper4</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Currency</arr:Key>
+               <arr:Value>RUB</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Amount</arr:Key>
+               <arr:Value>1630000</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>TempocashAmount</arr:Key>
+               <arr:Value>-25000</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>ExternalId</arr:Key>
+               <arr:Value>207720</arr:Value>
+            </arr:KeyValueOfstringstring>
+         </tem:inputParameters>
+      </tem:Register>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IBranchCashWebService/Register"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Incasation"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Register>
+         <!--Optional:-->
+         <tem:inputParameters>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Type</arr:Key>
+               <arr:Value>5</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>CashierId</arr:Key>
+               <arr:Value>tst-oper4</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>SafeId</arr:Key>
+               <arr:Value>10.69.4.158</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>ReplenishmentType</arr:Key>
+               <arr:Value>1</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>UseDepositCassette</arr:Key>
+               <arr:Value>1</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>ExternalId</arr:Key>
+               <arr:Value>207720</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>AvailableAmount</arr:Key>
+               <arr:Value>207720</arr:Value>
+            </arr:KeyValueOfstringstring>
+            <arr:KeyValueOfstringstring>
+               <arr:Key>Currency</arr:Key>
+               <arr:Value>RUB</arr:Value>
+            </arr:KeyValueOfstringstring>
+         </tem:inputParameters>
+      </tem:Register>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IBranchCashWebService/Register"/><con:wsrmConfig version="1.2"/></con:call><con:call name="UnLoad Validation Print"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Register>
+         <!--Optional:-->
+         <tem:inputParameters>
+            <!--Zero or more repetitions:-->
+            <arr:KeyValueOfstringstring>
+               <arr:Key>?</arr:Key>
+               <arr:Value>?</arr:Value>
+            </arr:KeyValueOfstringstring>
+         </tem:inputParameters>
+      </tem:Register>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IBranchCashWebService/Register"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Operation Protocol Printl"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Register>
+         <!--Optional:-->
+         <tem:inputParameters>
+            <!--Zero or more repetitions:-->
+            <arr:KeyValueOfstringstring>
+               <arr:Key>?</arr:Key>
+               <arr:Value>?</arr:Value>
+            </arr:KeyValueOfstringstring>
+         </tem:inputParameters>
+      </tem:Register>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IBranchCashWebService/Register"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/IBranchCashWebService/Repeat" name="Repeat" bindingOperationName="Repeat" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Repeat>
+         <!--Optional:-->
+         <tem:tranId>?</tem:tranId>
+      </tem:Repeat>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IBranchCashWebService/Repeat"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/IBranchCashWebService/Status" name="Status" bindingOperationName="Status" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BranchCashWebService/DeltaBranchCash</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Status>
+         <!--Optional:-->
+         <tem:tranId></tem:tranId>
+      </tem:Status>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IBranchCashWebService/Status"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

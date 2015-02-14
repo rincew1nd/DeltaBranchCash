@@ -1,13 +1,6 @@
 package DeltaBranchCash;
 
-import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfKeyValueOfstringstring;
-import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfKeyValueOfstringstring.KeyValueOfstringstring;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.xml.bind.JAXBElement;
 
 public class MySQL {
 
@@ -18,13 +11,43 @@ public class MySQL {
     String User = "java";
     String Password = "1234";
     
-    public void MySQL()
-    {
-    }
     
+    public ResultSet select(String query)
+    {
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            conn = DriverManager.getConnection(URI, User, Password);
+            stmn = conn.createStatement();
+            rs = stmn.executeQuery(query);
+            rs.close();
+            stmn.close();
+            conn.close();
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException ex) {
+            System.out.print(ex.getMessage());
+        }
+        return rs;
+    }
+    public boolean update(String query)
+    {
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            conn = DriverManager.getConnection(URI, User, Password);
+            stmn = conn.createStatement();
+            
+            stmn.executeUpdate(query);
+            
+            stmn.close();
+            conn.close();
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException ex) {
+            System.out.print(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
+    /*
     // Get parameters for response
     public Parameters GetParameters(long tran_id)
-    {   
+    {
         // Parameters array
         Parameters paramsPool = new Parameters();
         // Variables to create response type variables.
@@ -106,6 +129,7 @@ public class MySQL {
     // Store params of request in DB
     public long StoreParameters(long tran_id, JAXBElement<ArrayOfKeyValueOfstringstring> JAXBAOKVOSS)
     {
+        //if (validator.RegisterRequest(JAXBAOKVOSS.getValue())){}
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection(URI, User, Password);
@@ -127,4 +151,5 @@ public class MySQL {
         }
         return tran_id;
     }
+    */
 }
