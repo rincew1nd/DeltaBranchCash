@@ -24,7 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ArrayOfKeyValueOfstringstring_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfKeyValueOfstringstring");
+    private final static QName _OutputParams_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "outputParams", "a");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.microsoft.schemas._2003._10.serialization.arrays
@@ -34,28 +34,28 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ArrayOfKeyValueOfstringstring }
+     * Create an instance of {@link OutputParams }
      * 
      */
-    public ArrayOfKeyValueOfstringstring createArrayOfKeyValueOfstringstring() {
-        return new ArrayOfKeyValueOfstringstring();
+    public OutputParams createOutputParams() {
+        return new OutputParams();
     }
 
     /**
-     * Create an instance of {@link ArrayOfKeyValueOfstringstring.KeyValueOfstringstring }
+     * Create an instance of {@link OutputParams.KeyValueOfstringstring }
      * 
      */
-    public ArrayOfKeyValueOfstringstring.KeyValueOfstringstring createArrayOfKeyValueOfstringstringKeyValueOfstringstring() {
-        return new ArrayOfKeyValueOfstringstring.KeyValueOfstringstring();
+    public OutputParams.KeyValueOfstringstring createOutputParamsKeyValueOfstringstring() {
+        return new OutputParams.KeyValueOfstringstring();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfKeyValueOfstringstring }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OutputParams }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/Arrays", name = "ArrayOfKeyValueOfstringstring")
-    public JAXBElement<ArrayOfKeyValueOfstringstring> createArrayOfKeyValueOfstringstring(ArrayOfKeyValueOfstringstring value) {
-        return new JAXBElement<ArrayOfKeyValueOfstringstring>(_ArrayOfKeyValueOfstringstring_QNAME, ArrayOfKeyValueOfstringstring.class, null, value);
+    @XmlElementDecl(namespace = "http://schemas.microsoft.com/2003/10/Serialization/Arrays", name = "outputParams")
+    public JAXBElement<OutputParams> createOutputParams(OutputParams value) {
+        return new JAXBElement<OutputParams>(_OutputParams_QNAME, OutputParams.class, null, value);
     }
 
 }

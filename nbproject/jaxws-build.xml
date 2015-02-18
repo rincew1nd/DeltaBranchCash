@@ -24,27 +24,27 @@
             <classpath path="${j2ee.platform.wsimport.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsimport-service-DeltaBranchCash" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/service/DeltaBranchCash"/>
-        <property name="service-wsdl-DeltaBranchCash" location="${meta.inf}/xml-resources/web-services/DeltaBranchCash/wsdl/BranchCashWebService.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/DeltaBranchCash" destdir="${build.generated.dir}/jax-wsCache/service/DeltaBranchCash" wsdl="${service-wsdl-DeltaBranchCash}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" xnocompile="true" xendorsed="true">
-            <depends file="${wsdl-DeltaBranchCash}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/service/DeltaBranchCash"/>
+    <target name="wsimport-service-DBC" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/DBC"/>
+        <property name="service-wsdl-DBC" location="${meta.inf}/xml-resources/web-services/DBC/wsdl/BranchCashWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/DBC" destdir="${build.generated.dir}/jax-wsCache/service/DBC" wsdl="${service-wsdl-DBC}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-DBC}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/DBC"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/service/DeltaBranchCash">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/DBC">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
-        <property name="targetLocation-DeltaBranchCash" location="${meta.inf}/wsdl/DeltaBranchCash"/>
-        <property name="sourceLocation-DeltaBranchCash" location="${meta.inf}/xml-resources/web-services/DeltaBranchCash/wsdl/"/>
-        <copy todir="${targetLocation-DeltaBranchCash}">
-            <fileset dir="${sourceLocation-DeltaBranchCash}"/>
+        <property name="targetLocation-DBC" location="${meta.inf}/wsdl/DBC"/>
+        <property name="sourceLocation-DBC" location="${meta.inf}/xml-resources/web-services/DBC/wsdl/"/>
+        <copy todir="${targetLocation-DBC}">
+            <fileset dir="${sourceLocation-DBC}"/>
         </copy>
     </target>
-    <target name="wsimport-service-clean-DeltaBranchCash" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/service/DeltaBranchCash"/>
+    <target name="wsimport-service-clean-DBC" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/service/DBC"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
     </target>
-    <target name="wsimport-service-generate" depends="wsimport-service-DeltaBranchCash"/>
+    <target name="wsimport-service-generate" depends="wsimport-service-DBC"/>
 </project>

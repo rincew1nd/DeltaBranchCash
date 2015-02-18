@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="DeltaBranchCash">
-      <implementation-class>DeltaBranchCash.DeltaBranchCash</implementation-class>
-      <wsdl-url>file:/B:/Developing/Delta_BranchCash_project/Code/Delta_BranchCash_stuff/BranchCashWebService.wsdl</wsdl-url>
+    <service name="DBC">
+      <implementation-class>DBC.DBC</implementation-class>
+      <wsdl-url>file:/D:/Developing/Delta_BranchCash_project/Code/DeltaBranchCash/src/conf/xml-resources/web-services/DeltaBranchCash/wsdl/BranchCashWebService.wsdl</wsdl-url>
       <local-wsdl-file>BranchCashWebService.wsdl</local-wsdl-file>
       <service-name>BranchCashWebService</service-name>
       <port-name>BasicHttpBinding_IBranchCashWebService</port-name>

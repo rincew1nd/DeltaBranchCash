@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="file:/B:/Developing/Delta_BranchCash_project/Code/Delta_BranchCash_stuff/BranchCashWebService.wsdl" uri="src/conf/xml-resources/web-services/DeltaBranchCash/wsdl/BranchCashWebService.wsdl"/>
-    <system systemId="file:/B:/Developing/Delta_BranchCash_project/Code/Delta_BranchCash_stuff/xsd0.xsd" uri="src/conf/xml-resources/web-services/DeltaBranchCash/wsdl/xsd0.xsd"/>
-    <system systemId="file:/B:/Developing/Delta_BranchCash_project/Code/Delta_BranchCash_stuff/xsd1.xsd" uri="src/conf/xml-resources/web-services/DeltaBranchCash/wsdl/xsd1.xsd"/>
-    <system systemId="file:/B:/Developing/Delta_BranchCash_project/Code/Delta_BranchCash_stuff/xsd2.xsd" uri="src/conf/xml-resources/web-services/DeltaBranchCash/wsdl/xsd2.xsd"/>
+    <system systemId="file:/D:/Developing/Delta_BranchCash_project/Code/DeltaBranchCash/src/conf/xml-resources/web-services/DeltaBranchCash/wsdl/BranchCashWebService.wsdl" uri="src/conf/xml-resources/web-services/DBC/wsdl/BranchCashWebService.wsdl"/>
+    <system systemId="file:/D:/Developing/Delta_BranchCash_project/Code/DeltaBranchCash/src/conf/xml-resources/web-services/DeltaBranchCash/wsdl/xsd0.xsd" uri="src/conf/xml-resources/web-services/DBC/wsdl/xsd0.xsd"/>
+    <system systemId="file:/D:/Developing/Delta_BranchCash_project/Code/DeltaBranchCash/src/conf/xml-resources/web-services/DeltaBranchCash/wsdl/xsd1.xsd" uri="src/conf/xml-resources/web-services/DBC/wsdl/xsd1.xsd"/>
+    <system systemId="file:/D:/Developing/Delta_BranchCash_project/Code/DeltaBranchCash/src/conf/xml-resources/web-services/DeltaBranchCash/wsdl/xsd2.xsd" uri="src/conf/xml-resources/web-services/DBC/wsdl/xsd2.xsd"/>
 </catalog>
